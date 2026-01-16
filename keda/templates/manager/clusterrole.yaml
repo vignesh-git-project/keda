@@ -10,7 +10,6 @@ metadata:
     app.kubernetes.io/name: {{ .Values.operator.name }}
     {{- include "keda.labels" . | indent 4 }}
     rbac.authorization.k8s.io/aggregate-to-admin: "true"
-    rbac.authorization.k8s.io/aggregate-to-edit: "true"
   name: {{ .Values.operator.name }} 
 rules:
 - apiGroups:
